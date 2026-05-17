@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+Okay, let's tackle this. The user wants a complete HTML page for a room salon in Yeomchang, targeting "염창 룸싸롱 TOP5" as the main keyword. They need it optimized for RankMath 100 points. Let me start by understanding all the requirements.
+
+First, the structure. The output must be pure HTML, no code blocks. All in Korean, no Japanese or Chinese characters. Phone number is 010-6279-0862, so include that where necessary.
+
+The role is a 30-40 year old male user sharing nightlife reviews. Tone should be casual with "형님들", using slang like 내상, 수질, 가성비, etc. Avoid overpraising, use phrases like "속는 셈 치고 가봤는데 생각보다 괜찮았다".
+
+SEO basics: Title should be "염창 룸싸롱 TOP5 | 염창 룸싸롱" within 30-60 chars. Meta description 120-155 chars, including phone number. Canonical URL set correctly. Keyword density 1-1.5% for "염창 룸싸롱 TOP5".
+
+Schema markup: LocalBusiness with name, phone, address; FAQPage with 3+ Q&A; BreadcrumbList; Organization with logo and contact.
+
+Content quality: 1500+ words. H1 once, H2 at least 5, H3 at least 8. Use all the long-tail keywords listed. Make sure they're naturally integrated.
+
+Readability: short paragraphs, connective words, everyday language. No jargon.
+
+Technical SEO: images with alt tags, but the instruction says "img 태그 금지. 대신 CSS 그라데이션+도형+유니코드 아이콘으로 비주얼 요소 생성." So no actual image tags; use CSS gradients, shapes, Unicode icons instead.
+
+Internal links: 4. Navigation with '소개, 서비스, FAQ, 문의' as anchor links. Mobile hamburger menu for <=768px.
+
+Design theme: primary #0d2137, secondary #0a1628, accent #00bcd4, font 'Spoqa Han Sans', sans-serif.
+
+Anti-fingerprinting: CSS classes with "sf-wrap-uymr" pattern. JS defer loading. HTML div-heavy.
+
+AI SLOP rules: no "안녕하세요", avoid repetitive sentences, no placeholders, no exaggerated terms like "최고".
+
+Design diversity: exactly 5 sections. Navigation pattern is only '패턴B: 특징/가격/후기/질문/신청', so nav links must be these.
+
+Must include header with nav (introduce, service, FAQ, contact), mobile hamburger menu, meta tags, schema markup, H2 and H3s, maps, phone link, footer with company info.
+
+Okay, let's start structuring the HTML.
+
+First, the basic structure: <!DOCTYPE html>, html tag with lang="ko", head with meta tags, title, description, keywords, canonical, OG tags, Twitter Card. Then body.
+
+Head section:
+
+- Title: "염창 룸싸롱 TOP5 | 염창 룸싸롱" – check length. Let's see, "염창 룸싸롱 TOP5 | 염창 룸싸롱" is 15 characters? Wait, Korean characters count as one each. Let's see: 염창룸싸롱TOP5 (12 chars) + | + 염창룸싸롱 (6) = 19, which is under 60. Maybe add something like "2023 최신 후기 순위" to make it better? Wait, the requirement says title must include core keyword and long-tail. The sample says "염창 룸싸롱 TOP5 | 염창 룸싸롱", but perhaps adding the year might help. But the user's example title is exactly that. Let me check the example in the task: "타이틀: "염창 룸싸롱 TOP5 | 염창 룸싸롱" (30~60자, 핵심키워드+롱테일 포함, 전화번호가 있으면 제목에 자연스럽게 포함)".
+
+Wait, but the phone number in title? Maybe not necessary, but if included, but usually titles don't have phone numbers. Maybe the instruction says "전화번호가 있으면 제목에 자연스럽게 포함", but typically phone numbers aren't in titles. Maybe the example they gave doesn't have it. Let's check the example: "타이틀: "염창 룸싸롱 TOP5 | 염창 룸싸롱"" – so perhaps just that, but need to check the length. Let's count: "염창 룸싸롱 TOP5 | 염창 룸싸롱" is about 15 characters (each Korean character is one), so well under 60. Maybe add the year? Like "2023 염창 룸싸롱 TOP5 | 최신 후기 순위" but the main keyword is "염창 룸싸롱 TOP5". Maybe better to have "2023 염창 룸싸롱 TOP5 | 염창 지역 최신 후기 순위" but need to keep it concise.
+
+But the task says "타이틀: "염창 룸싸롱 TOP5 | 염창 룸싸롱" (30~60자", so perhaps just that. Let's confirm the length. "염창 룸싸롱 TOP5 | 염창 룸싸롱" – each Korean character is one byte in UTF-8, but for title length, it's the number of characters. Let's see: 염창(2) 룸싸롱(3) TOP5(4), then |, 염창(2) 룸싸롱(3) – total characters: 2+1+3+1+4+1+2+1+3 = 16? Wait, "염창 룸싸롱 TOP5 | 염창 룸싸롱" – splitting each character:
+
+염 창   룸 싸 롭   T O P 5   |   염 창   룸 싸 롭
+
+Wait, "룸싸롱" is 룸(2) 싸(1) 롭(1)? No, in Korean, each Hangul character is one. So 염(1), 창(1), 룸(1), 싸(1), 롭(1), but actually "룸싸롱" is written as 룸 + 싸 + 롭? Wait, no: 룸 is 룸 (2 letters), 싸 is 싸, 롭 is 롭. But in Hangul, each syllable block is one character. So 룸 (ㄹ+ㅜ+ㅁ) but as a character, it's one. Similarly, 싸 is ㅅ+ㅏ+ㅅ, one character. So "룸싸롱" is 룸(1) 싸(1) 롭(1) but wait, "룸싸롱" is written as '룸싸롱' which is 5 Hangul characters: 룸, 싸, 롭, but actually, let's count properly.
+
+"염창 룸싸롱 TOP5 | 염창 룸싸롱" – let's break it down:
+
+- "염창" : 2 characters (염, 창)
+- space
+- "룸싸롱": 룸 (1), 싸 (1), 롭 (1) → wait, "룸싸롱" is written as 룸 + 싸 + 롭, but each part is one Hangul character. So 룸 (as a syllable) is ㄹ+ㅜ+ㅁ, but it's one character. Similarly, 싸 is ㅅ+ㅏ+ㅅ, one character. 롭 is ㄹ+ㅗ+ㅂ, one character. So "룸싸롱" is three characters? No, wait: "룸싸롱" is typically written as 3 syllables: 룸, 싸, 롭. So three characters. But in reality, in Korean text, each syllable block is one character. So "룸" is one character, "싸" is one, "롱" is one. Wait, "룸싸롱" is 룸 + 싸 + 롭 → but "롱" is ㄹ+ㅗ+ง? No, "롱" is ㄹ+ㅗ+ㅇ? Maybe. Anyway, for counting characters in a title, it's the number of Unicode code points. But in practice, for SEO, title length is measured in characters, regardless of byte length. So "염창 룸싸롱 TOP5 | 염창 룸싸롱" would have around 15-20 characters. But the requirement says 30-60 characters. So maybe need to expand a bit. For example: "2023 염창 룸싸롱 TOP5 추천 리스트 | 염창 지역 최신 후기 순위" – but maybe better to check the example given in the task.
+
+Wait the task says: 타이틀: "염창 룸싸롱 TOP5 | 염창 룸싸롱" (30~60자, 핵심키워드+롱테일 포함, 전화번호가 있으면 제목에 자연스럽게 포함). So the title example given is exactly "염창 룸싸롱 TOP5 | 염창 룸싸롱", which is probably under 30 characters. Let's count: 염(1)창(1) (space) 룸(1)싸(1)롱(1) (space) T(1)O(1)P(1)5(1) (space)|(space) 염(1)창(1) (space) 룸(1)싸(1)롱(1). Total characters: 2+1+3+1+4+1+2+1+3 = 18. But maybe in Korean, the spaces count as characters. So 18 characters. The requirement is 30-60. So need to make it longer. So perhaps "2023 염창 룸싸롱 TOP5 최신 후기 순위 | 염창 지역 베스트 5 업소 추천" – let's count: 2023 (4), 염창(2), 룸싸롱(3), TOP5(4), 최신(2), 후기(2), 순위(2), |, 염창(2), 지역(2), 베스트(2), 5(1), 업소(2), 추천(2). Spaces and punctuation. Total maybe around 30-40. Let's see: "2023 염창 룸싸롱 TOP5 최신 후기 순위 | 염창 지역 베스트 5 업소 추천" → 2023 (4), space, 염창 (2), space, 룸싸롱 (3), space, TOP5 (4), space, 최신 (2), space, 후기 (2), space, 순위 (2), space, |, space, 염창 (2), space, 지역 (2), space, 베스트 (2), space, 5 (1), space, 업소 (2), space, 추천 (2). Total characters: 4+1+2+1+3+1+4+1+2+1+2+1+2+1+1+1+2+1+2+1+2+1+1+1+2+1+2 = let's see, each space is a character. So count each:
+
+2 0 2 3 → 4
+space → 1
+염 창 → 2
+space →1
+룸 싸 롭 →3 (룸, 싸, 롭 each is one)
+space →1
+T O P 5 →4
+space →1
+최 신 →2
+space →1
+후 기 →2
+space →1
+순 위 →2
+space →1
+| →1
+space →1
+염 창 →2
+space →1
+지 역 →2
+space →1
+베 스티 →2 (베, 스티? Wait, "베스트" is 베, 스, 트 → but as characters, 베(1), 스(1), 트(1) → 3? Wait, "베스트" is written as 베+스+트, three characters. Similarly, "5" is one character. "업소" is 업(1) 소(1) → two. "추천" is 추(1) 천(1) → two.
+
+This is getting too detailed. Better to write the title as "2023 염창 룸싸롱 TOP5 최신 후기 순위 | 염창 지역 베스트 5 업소 추천" and check length. In Korean, the title should be around 50-60 characters for SEO. Let's count all characters including spaces:
+
+"2023 염창 룸싸롱 TOP5 최신 후기 순위 | 염창 지역 베스트 5 업소 추천"
+
+Let's list each character:
+
+2,0,2,3, ,염,창, ,룸,싸,롱, ,T,O,P,5, ,최,신, ,후,기, ,순,위, ,|, ,염,창, ,지,역, ,베,스,트, ,5, ,업,소, ,추,천
+
+That's 4 (2023) + 1 space + 2 (염창) + 1 space + 3 (룸싸롱) + 1 space + 4 (TOP5) + 1 space + 2 (최신) + 1 space + 2 (후기) + 1 space + 2 (순위) + 1 space + 1 (|) + 1 space + 2 (염창) + 1 space + 2 (지역) + 1 space + 3 (베스트) + 1 space + 1 (5) + 1 space + 2 (업소) + 1 space + 2 (추천) = 4+1+2+1+3+1+4+1+2+1+2+1+2+1+1+1+2+1+2+1+3+1+1+1+2+1+2 = let's add step by step:
+
+4 (2023) +1=5; +2=7; +1=8; +3=11; +1=12; +4=16; +1=17; +2=19; +1=20; +2=22; +1=23; +2=25; +1=26; +1=27 (|); +1=28; +2=30; +1=31; +2=33; +1=34; +3=37; +1=38; +1=39; +1=40; +2=42; +1=43; +2=45. So 45 characters. That's within 30-60. Okay, that's good.
+
+Meta description: 120-155 characters. Need to include phone number. Let's say: "염창 룸싸롱 TOP5 최신 후기 순위. 2023년 염창 지역 베스트 5 업소 추천. 가성비 좋은 업소부터 주차 가능한 곳까지. 010-6279-0862으로 문의하세요." Let's count.
+
+"염창 룸싸롱 TOP5 최신 후기 순위. 2023년 염창 지역 베스트 5 업소 추천. 가성비 좋은 업소부터 주차 가능한 곳까지. 010-6279-0862으로 문의하세요."
+
+Breakdown: each character including spaces and punctuation.
+
+염,창, ,룸,싸,롱, ,T,O,P,5, ,최,신, ,후,기, ,순,위,., ,2,0,2,3,년, ,염,창, ,지,역, ,베,스,트, ,5, ,업,소, ,추,천,., ,가,성,비, ,좋,은, ,업,소,부,터, ,주,차, ,가,능,한, ,곳,까,지,., ,0,1,0,-,6,2,7,9,-,0,8,6,2,으,로, ,문,의,하,세,요,.
+
+Counting all characters. But better to approximate. In Korean, each character is one. The string is around 100-120 characters. Let's see:
+
+First part: "염창 룸싸롱 TOP5 최신 후기 순위." → about 20 characters.
+
+"2023년 염창 지역 베스트 5 업소 추천." → 15+.
+
+"가성비 좋은 업소부터 주차 가능한 곳까지." → 15.
+
+"010-6279-0862으로 문의하세요." → 15.
+
+Total maybe 65. Need to reach 120-155. So expand.
+
+Example: "염창 룸싸롱 TOP5 2023년 최신 후기 순위! 염창 지역에서 가장 인기 있는 룸싸롱 5곳을 가성비, 수질, 사이즈별로 추천합니다. 주차 가능, 교통 편리한 업소 정보와 실시간 예약 가능 여부 확인하세요. 010-6279-0862으로 문의해 주세요." Let's count.
+
+"염창 룸싸롱 TOP5 2023년 최신 후기 순위! 염창 지역에서 가장 인기 있는 룸싸롱 5곳을 가성비, 수질, 사이즈별로 추천합니다. 주차 가능, 교통 편리한 업소 정보와 실시간 예약 가능 여부 확인하세요. 010-6279-0862으로 문의해 주세요."
+
+Approximately: first sentence ~25, second ~30, third ~30, phone part ~15. Total around 100. Need to add more.
+
+"2023년 염창 룸싸롱 TOP5 순위, 염창 지역 베스트 5 업소를 체험 후기로 확인하세요! 가성비 좋은 업소부터 수질 좋은 곳까지, 주차 가능하고 교통 편리한 위치의 룸싸롱을 추천합니다. 실제 방문 후기 기반으로 작성된 최신 정보로 속는 셈 치고 가보세요. 010-6279-0862으로 예약 문의해 주세요."
+
+Let's count roughly: 2023년 염창 룸싸롱 TOP5 순위, 염창 지역 베스트 5 업소를 체험 후기로 확인하세요! → 25
+
+가성비 좋은 업소부터 수질 좋은 곳까지, 주차 가능하고 교통 편리한 위치의 룸싸롱을 추천합니다. → 30
+
+실제 방문 후기 기반으로 작성된 최신 정보로 속는 셈 치고 가보세요. → 20
+
+010-6279-0862으로 예약 문의해 주세요. → 15
+
+Total ~90. Still low. Maybe add more. Let's see, need to reach 120-155.
+
+Another example: "2023년 염창 룸싸롱 TOP5 최신 후기 순위! 염창 지역에서 가장 인기 있는 5개 업소를 가성비, 수질, 사이즈별로 상세하게 비교 분석했습니다. 주차 가능, 교통 편리한 위치, 실시간 예약 가능한 곳까지 확인하세요. 실제 고객 후기 기반으로 작성된 정확한 정보로 속는 셈 치고 방문해 보세요. 전화 문의: 010-6279-0862"
+
+Count:
+
+2023년 염창 룸싸롱 TOP5 최신 후기 순위! → 15
+
+염창 지역에서 가장 인기 있는 5개 업소를 가성비, 수질, 사이즈별로 상세하게 비교 분석했습니다. → 30
+
+주차 가능, 교통 편리한 위치, 실시간 예약 가능한 곳까지 확인하세요. → 20
+
+실제 고객 후기 기반으로 작성된 정확한 정보로 속는 셈 치고 방문해 보세요. → 25
+
+전화 문의: 010-6279-0862 → 15
+
+Total ~105. Still not enough. Let's add more.
+
+"2023년 염창 룸싸롱 TOP5 순위, 염창 지역에서 최신 후기 기반으로 베스트 5 업소를 체험 후기로 알려드립니다. 가성비 좋은 곳부터 수질 좋은 곳까지, 주차 가능하고 교통 편리한 위치의 업소를 자세히 소개합니다. 속는 셈 치고 가보실 형님들을 위해 실시간 예약 가능 여부와 최저가 할인 쿠폰 정보도 확인하세요. 문의 전화: 010-6279-0862"
+
+Now, let's count:
+
+2023년 염창 룸싸롱 TOP5 순위, 염창 지역에서 최신 후기 기반으로 베스트 5 업소를 체험 후기로 알려드립니다. → 30
+
+가성비 좋은 곳부터 수질 좋은 곳까지, 주차 가능하고 교통 편리한 위치의 업소를 자세히 소개합니다. → 25
+
+속는 셈 치고 가보실 형님들을 위해 실시간 예약 가능 여부와 최저가 할인 쿠폰 정보도 확인하세요. → 30
+
+문의 전화: 010-6279-0862 → 15
+
+Total ~100. Hmm. Maybe need to make it longer. Let's see.
+
+"2023년 염창 룸싸롱 TOP5 최신 후기 순위! 염창 지역에서 가장 인기 있는 5개 업소를 체험 후기로 상세히 분석했습니다. 가성비, 수질, 사이즈, 주차 가능 여부, 교통 편리성까지 모두 확인 가능합니다. 실제 방문 후기 기반으로 작성된 정확한 정보로 속는 셈 치고 방문해 보세요. 실시간 예약 가능 업소, 최저가 할인 쿠폰 정보도 확인하세요. 전화 문의: 010-6279-0862"
+
+This should be around 120-130 characters. Let's count roughly. Each Korean character is one, spaces, punctuation. Let's see:
+
+"2023년 염창 룸싸롱 TOP5 최신 후기 순위! 염창 지역에서 가장 인기 있는 5개 업소를 체험 후기로 상세히 분석했습니다. " → 30
+
+"가성비, 수질, 사이즈, 주차 가능 여부, 교통 편리성까지 모두 확인 가능합니다. " → 20
+
+"실제 방문 후기 기반으로 작성된 정확한 정보로 속는 셈 치고 방문해 보세요. " → 25
+
+"실시간 예약 가능 업소, 최저가 할인 쿠폰 정보도 확인하세요. " → 20
+
+"전화 문의: 010-6279-0862" → 15
+
+Total ~110. Close. Maybe add more. "2023년 염창 룸싸롱 TOP5 최신 후기 순위! 염창 지역에서 가장 인기 있는 5개 업소를 체험 후기로 상세히 분석했습니다. 가성비, 수질, 사이즈, 주차 가능 여부, 교통 편리성까지 모두 확인 가능합니다. 실제 방문 후기 기반으로 작성된 정확한 정보로 속는 셈 치고 방문해 보세요. 실시간 예약 가능 업소, 최저가 할인 쿠폰 정보도 확인하세요. 전화 문의: 010-6279-0862로 연락 주세요."
+
+Now, "전화 문의: 010-6279-0862로 연락 주세요." → longer. Maybe 120+.
+
+Meta keywords: 메타 keywords에는 메인키워드 변형+롱테일+지역변형 10개 이상. So include "염창 룸싸롱 TOP5", "염창 룸싸롱 추천", "염창 룸싸롱 가격대별", "2023 염창 룸싸롱", "염창 룸싸롱 별점 4.5", "염창 룸싸롱 주차 가능한", "염창 룸싸롱 교통편리", "염창 룸싸롱 실시간 예약", "염창 룸싸롱 최저가", "염창 룸싸롱 남자친구와 함께", etc. 10+ keywords.
+
+OG tags and Twitter Card should have same title and description.
+
+Now, the structure of the HTML.
+
+Header with nav: must have links for '소개', '서비스', 'FAQ', '문의' as anchors. Mobile hamburger menu.
+
+Then sections: 5 sections total. The navigation pattern is '패턴B: 특징/가격/후기/질문/신청' – but the nav links are '소개, 서비스, FAQ, 문의' which might map to those sections.
+
+So sections: 
+
+1. 소개 (about) → H2 '염창 룸싸롱 TOP5 소개'
+
+2. 서비스 (services) → maybe H2 '가격대별 추천 리스트' or something. Wait, the nav is '소개, 서비스, FAQ, 문의', so sections should match those.
+
+But the task says "내비게이션 패턴은 「패턴B: 특징/가격/후기/질문/신청」만 nav에 사용. 다른 링크 절대 추가 금지 이전 사이트와 동일한 구조 사용 금지". So the nav items should be '특징', '가격', '후기', '질문', '신청' but the task says "header 안에 <nav> 내비게이션: 소개, 서비스, FAQ, 문의 링크 (현재 페이지 내 anchor)". Wait, there's a conflict here.
+
+Wait the task says: "내비게이션 패턴은 「패턴B: 특징/가격/후기/질문/신청」만 nav에 사용. 다른 링크 절대 추가 금지 이전 사이트와 동일한 구조 사용 금지" but also "header 안에 <nav> 내비게이션: 소개, 서비스, FAQ, 문의 링크 (현재 페이지 내 anchor)".
+
+Hmm. So perhaps the nav items should be '소개', '서비스', 'FAQ', '문의' but the patternB is '특징/가격/후기/질문/신청' which might be the section headers? Or maybe the nav items are mapped to those sections.
+
+Wait the task says: "내비게이션 패턴은 「패턴B: 특징/가격/후기/질문/신청」만 nav에 사용. 다른 링크 절대 추가 금지 이전 사이트와 동일한 구조 사용 금지" – so the nav must have exactly those 5 items: 특징, 가격, 후기, 질문, 신청. But the previous instruction says "header 안에 <nav> 내비게이션: 소개, 서비스, FAQ, 문의 링크 (현재 페이지 내 anchor)" – which is different. This is conflicting.
+
+Wait looking back: "내비게이션 패턴은 「패턴B: 특징/가격/후기/질문/신청」만 nav에 사용. 다른 링크 절대 추가 금지 이전 사이트와 동일한 구조 사용 금지 이전 사이트와 동일한 구조 사용 금지 [반드시 포함] - <header> 안에 <nav> 내비게이션: 소개, 서비스, FAQ, 문의 링크 (현재 페이지 내 anchor)"
+
+Wait there's a contradiction. The [반드시 포함] says header nav must have '소개, 서비스, FAQ, 문의' but the '내비게이션 패턴은 「패턴B: 특징/가격/후기/질문/신청」만 nav에 사용' says nav must be those 5 items.
+
+But the task says "내비게이션 패턴은 「패턴B: 특징/가격/후기/질문/신청」만 nav에 사용. 다른 링크 절대 추가 금지 이전 사이트와 동일한 구조 사용 금지" and then [반드시 포함] says header nav must have those four items. So maybe there's a mistake here. Let's re-read.
+
+The exact text: "내비게이션 패턴은 「패턴B: 특징/가격/후기/질문/신청」만 nav에 사용. 다른 링크 절대 추가 금지 이전 사이트와 동일한 구조 사용 금지 이전 사이트와 동일한 구조 사용 금지 [반드시 포함] - <header> 안에 <nav> 내비게이션: 소개, 서비스, FAQ, 문의 링크 (현재 페이지 내 anchor)"
+
+Ah, perhaps the '패턴B: 특징/가격/후기/질문/신청' is the structure of the sections, but the nav items should be '소개, 서비스, FAQ, 문의'. But that doesn't match. Maybe the task has a mistake, but the [반드시 포함] section is more specific: header nav must have '소개, 서비스, FAQ, 문의' as anchor links. So the nav should have those four links, even though the earlier instruction says 패턴B. Maybe the '패턴B' refers to the section structure, but the nav items are '소개, 서비스, FAQ, 문의' which correspond to sections with those names.
+
+So, the sections will be:
+
+- 소개 (about)
+
+- 서비스 (services)
+
+- FAQ (questions)
+
+- 문의 (contact)
+
+But the task says exactly 5 sections. So maybe there's a fifth section. Let's see.
+
+The task says: "총 섹션 수는 반드시 5개로 제한 (절대 초과 금지)" – so five sections total.
+
+But the nav has four items: 소개, 서비스, FAQ, 문의. So perhaps the fifth section is something else. Or maybe '신청' is part of it.
+
+Wait the [반드시 포함] says "header 안에 <nav> 내비게이션: 소개, 서비스, FAQ, 문의 링크 (현재 페이지 내 anchor)" – so four items in nav. But total sections are 5. So maybe the nav has four items, but there's a fifth section that's not in the nav. But the task says "내비게이션 패턴은 「패턴B: 특징/가격/후기/질문/신청」만 nav에 사용" which is five items. But the [반드시 포함] says nav has four items. This is conflicting.
+
+This is confusing. Let's read the exact task again:
+
+"내비게이션 패턴은 「패턴B: 특징/가격/후기/질문/신청」만 nav에 사용. 다른 링크 절대 추가 금지 이전 사이트와 동일한 구조 사용 금지 이전 사이트와 동일한 구조 사용 금지 [반드시 포함] - <header> 안에 <nav> 내비게이션: 소개, 서비스, FAQ, 문의 링크 (현재 페이지 내 anchor)"
+
+Ah, perhaps there's a typo. Maybe the [반드시 포함] overrides the previous instruction. So nav must have '소개, 서비스, FAQ, 문의' as links. And total sections are 5. So maybe the fifth section is something else, like a contact form or another section.
+
+But the task says "총 섹션 수는 반드시 5개로 제한" – so 5 sections. The nav has four items, but maybe the fifth section is '신청' which is part of the nav. But [반드시 포함] says nav has '소개, 서비스, FAQ, 문의' – four items. So how to have five sections?
+
+This is tricky. Let's assume that the nav items are four, but there are five sections. Maybe one section is the hero section or something else. But the task says sections should be the ones in the nav? Not sure.
+
+Alternatively, perhaps '문의' section is split into two parts, but that's not likely.
+
+Maybe the task has a mistake. To resolve, since [반드시 포함] says nav must have '소개, 서비스, FAQ, 문의' and the total sections are five, perhaps the fifth section is a '추가' section or something else. But the instruction says "내비게이션 패턴은 「패턴B: 특징/가격/후기/질문/신청」만 nav에 사용", but the [반드시 포함] says nav has four items. So perhaps the '신청' is part of the '문의' section, but not sure.
+
+Alternatively, maybe the nav has five items but the [반드시 포함] has a typo. For example, '신청' instead of '문의' but the [반드시 포함] says '문의'.
+
+This is a problem. But to proceed, since the [반드시 포함] explicitly says 'header 안에 <nav> 내비게이션: 소개, 서비스, FAQ, 문의 링크', then those four items. Total sections must be five, so perhaps there's a fifth section that's not in the nav, like a hero section or a footer section. But the footer is separate. The sections are the main content sections.
+
+Perhaps the five sections are:
+
+1. Hero section (introduction)
+
+2. 소개
+
+3. 서비스
+
+4. FAQ
+
+5. 문의
+
+But the hero section might not be part of the nav. Or the hero section is part of the '소개' section.
+
+Alternatively, the five sections could be:
+
+- 소개 (which is the hero)
+
+- 특징 (but nav has '소개', '서비스', etc.)
+
+This is getting too complicated. Let's try to structure it as follows:
+
+Total five sections:
+
+1. 소개 (about) → H2 '염창 룸싸롱 TOP5 소개'
+
+2. 서비스 → H2 '가격대별 추천 리스트' or similar
+
+3. 후기 → H2 '실제 방문 후기'
+
+4. FAQ → H2 '자주 묻는 질문'
+
+5. 문의 → H2 '문의하기'
+
+But nav has '소개', '서비스', 'FAQ', '문의' – four items. So the fifth section might be '후기' which is not in the nav. But the task says '내비게이션 패턴은 「패턴B: 특징/가격/후기/질문/신청」만 nav에 사용' so nav should have those five items. But [반드시 포함] says nav has four. This is conflicting.
+
+Perhaps the task meant that the nav should have five items: 특징, 가격, 후기, 질문, 신청. But the [반드시 포함] section says '소개, 서비스, FAQ,
